@@ -1,7 +1,6 @@
 import unittest
 # import formula.bs as bs
 
-import ...draft
 
 class TestBS(unittest.TestCase):
 
@@ -26,7 +25,12 @@ class TestBS(unittest.TestCase):
             self.assertGreater(p, 0, f"\n{style} option price should be positive")
 
 
-
 print("-"*70)
+
+if __package__ is None:
+    import bs
+else:
+    import formula.bs as bs
+
 unittest.main()
 

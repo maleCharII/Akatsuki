@@ -9,5 +9,10 @@ print(module_path)
 
 print(__package__)
 
-from .. import bs
+
+if __package__ is None:
+    print("package is none...")
+    import bs  
+else:    
+    import formula.bs
 
