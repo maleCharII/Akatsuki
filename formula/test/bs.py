@@ -1,5 +1,7 @@
 import unittest
-import bs
+# import formula.bs as bs
+
+import ...draft
 
 class TestBS(unittest.TestCase):
 
@@ -20,7 +22,7 @@ class TestBS(unittest.TestCase):
             style = 'Call' if i == 1 else 'Put'
             input['opt_code'] = i
             
-            p = bs.price(1, 372, 372, 0.2, 1/252)
+            p = bs.price(**input)
             self.assertGreater(p, 0, f"\n{style} option price should be positive")
 
 
