@@ -1,5 +1,5 @@
 import unittest
-from .. import bs
+import bs
 
 class TestBS(unittest.TestCase):
 
@@ -13,8 +13,7 @@ class TestBS(unittest.TestCase):
         }
         return input
 
-    def price_is_positive(self):
-        print("testing: option price should be positive...")
+    def test_price_is_positive(self):
         input = self.get_input()
 
         for i in (bs.CALL, bs.PUT):
@@ -22,6 +21,10 @@ class TestBS(unittest.TestCase):
             input['opt_code'] = i
             
             p = bs.price(1, 372, 372, 0.2, 1/252)
-            self.assertGreater(p, 0, f"{style} option price is positive")
+            self.assertGreater(p, 0, f"\n{style} option price should be positive")
 
+
+
+print("-"*70)
 unittest.main()
+
