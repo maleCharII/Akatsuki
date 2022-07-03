@@ -1,5 +1,10 @@
+if __package__ is None:
+    import sys
+    root_dir = "c:\\Users\\mwfre\\OneDrive\\Desktop\\_GitHub\\Akatsuki"
+    sys.path.insert(0, root_dir)
+
 import unittest
-# import formula.bs as bs
+import formula.bs as bs
 
 
 class TestBS(unittest.TestCase):
@@ -26,11 +31,6 @@ class TestBS(unittest.TestCase):
 
 
 print("-"*70)
-
-if __package__ is None:
-    import bs
-else:
-    import formula.bs as bs
 
 unittest.main()
 
