@@ -114,6 +114,10 @@ try:
     info = api.get_table_info(table)
     print(info)
 
+    query = f"Drop Table If Exists {table}"
+    api.cursor.execute(query)
+    api.conn.commit()
+
 except Exception as e:
     print(e.args)
 finally:
