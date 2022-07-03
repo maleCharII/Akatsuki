@@ -14,3 +14,12 @@ sys.path.insert(0, root_dir)
 # Markdown
 
 https://www.markdownguide.org/cheat-sheet/
+
+
+# Sqlite
+
+## Table Naming Rules
+
+- alphabetical before number
+- allow _
+- case sensitive
