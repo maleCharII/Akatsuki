@@ -23,3 +23,13 @@ https://www.markdownguide.org/cheat-sheet/
 - alphabetical before number
 - allow _
 - case sensitive
+
+## Examples
+- sql_01.py: 101 
+
+# Pandas
+
+main ref: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
+
+## Examples
+- pd_01.py: create dataframe

@@ -1,6 +1,7 @@
 import sqlite3 as sql
 
-print('='*35, 'Start', '='*35)
+msg = '='*35 + ' Start ' + '='*35
+print(msg)
 
 # in memory setup
 print(">> Connecting ...")
@@ -44,4 +45,5 @@ print(out)
 conn.commit()
 conn.close()
 
-print('='*78)
+print('='*len(msg))
+
