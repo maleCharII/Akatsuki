@@ -83,46 +83,4 @@ class QueryAPI():
         return self.cursor.fetchall()
 
 
-dt = {
-    'id': 'string',
-    'class': 'string',
-    'value': 'int'
-}
-
-data = [
-    ('a1', 'A', 2),
-    ('a1', 'A', 3),
-    ('b1', 'B', -1),
-]
-
-df = pd.DataFrame(data, columns=[*dt])
-df = df.astype(dt)
-
-try:
-    api = QueryAPI("ADHOC.db")
-
-    table = 'dummy_01'
-    query = f"Drop Table If Exists {table}"
-    api.cursor.execute(query)
-    api.conn.commit()
-
-    api.upload_df(df, table)
-
-    df = api.fetch_df(table)
-    print(df)
-
-    info = api.get_table_info(table)
-    print(info)
-
-    query = f"Drop Table If Exists {table}"
-    api.cursor.execute(query)
-    api.conn.commit()
-
-except Exception as e:
-    print(e.args)
-finally:
-    api.conn.close()    
-
-
-        
 
