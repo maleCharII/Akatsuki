@@ -33,3 +33,7 @@ main ref: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
 
 ## Examples
 - pd_01.py: create dataframe
+
+## Understanding 
+- series:
+  - an iteratable object with each item as a tuple

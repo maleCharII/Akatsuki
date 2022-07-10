@@ -2,6 +2,7 @@ import sqlite3 as sql
 import numpy as np
 import pandas as pd
 
+
 class QueryAPI():
     SERVER_DIR = "C:\\Users\mwfre\OneDrive\\Desktop\\_GitHub\\Akatsuki\\DBQ\\server\\"
     # DB list
@@ -81,6 +82,3 @@ class QueryAPI():
         query = f"PRAGMA table_info( {table} )"
         self.cursor.execute(query)
         return self.cursor.fetchall()
-
-
-
